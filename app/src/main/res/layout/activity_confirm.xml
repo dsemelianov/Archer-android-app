@@ -1,0 +1,126 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="2">
+
+    <LinearLayout
+        android:id="@+id/top_panel"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="3"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Pssst... We just texted\n you a secret code."
+            android:textSize="20sp"
+            android:maxLines="2"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/confirm_icon"
+            android:layout_width="60dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:src="@drawable/confirm_number"
+            android:layout_centerInParent="true"/>
+
+
+        <TextView
+            android:id="@+id/resend"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="bottom|center_horizontal"
+            android:paddingBottom="10dp"
+            android:text="Didn't get it? Resend the code."
+            android:textSize="15sp"
+            android:textColor="#000000"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_panel"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="2"
+        android:orientation="vertical"
+        android:background="@color/seafoam_green">
+
+        <RelativeLayout
+            android:id="@+id/edit_text_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/search_box_image"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/type_box"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:text="Enter it here:"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:layout_above="@id/search_box_image"
+                android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/phone_number_field"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:inputType="phone"
+                android:layout_alignBottom="@id/search_box_image"
+                android:layout_alignTop="@id/search_box_image"
+                android:layout_alignLeft="@id/search_box_image"
+                android:layout_alignRight="@id/search_box_image"
+                android:textColor="#000000"
+                android:textColorHint="#000000"
+                android:background="#00000000"
+                android:textSize="40sp"
+                android:gravity="center"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/continue_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/continue_button"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/continue_button"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

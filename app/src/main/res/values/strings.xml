@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Archer</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_logout">Logout</string>
+    <string name="api_url">http://pointme-env.29xnyiqa8x.us-west-2.elasticbeanstalk.com/api/</string>
+    <!--<string name="api_url">http://pointme-hogueyy.c9users.io/api/</string>-->
+    <string name="api_key">.json?k=hdj36dHyFB47dnG7h5FrEEW6E8d99j00JpD3a1M</string>
+
+</resources>

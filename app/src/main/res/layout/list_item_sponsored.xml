@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/body"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp" >
+
+        <RelativeLayout
+            android:id="@+id/side_banner"
+            android:layout_width="10dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="#7678ED" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/side_banner"
+            android:layout_marginLeft="40dp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:text="Chris Hogue" />
+
+        <ImageView
+            android:id="@+id/sponsored"
+            android:layout_width="30dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/sponsored" />
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

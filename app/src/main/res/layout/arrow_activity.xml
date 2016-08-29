@@ -1,0 +1,165 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#50D2C2"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/mode_button"
+        android:layout_width="fill_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF">
+        <ImageView
+            android:id="@+id/mode_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/map_icon"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/information_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/name_label"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:text="Matthew Speller" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/name_label"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:id="@+id/distance_layout"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:text="N/A" />
+
+                <ImageView
+                    android:id="@+id/distance_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/distance"
+                    android:layout_alignBottom="@id/distance"
+                    android:src="@drawable/distance_icon" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/time_layout"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:text="N/A" />
+
+                <ImageView
+                    android:id="@+id/time_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/time"
+                    android:layout_alignBottom="@id/time"
+                    android:src="@drawable/time_icon" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/navigation_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/mode_button"
+        android:layout_below="@+id/information_layout">
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/arrow_spin"/>
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+        </com.google.android.gms.maps.MapView>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/target"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/mode_button"
+        android:layout_marginBottom="10dp"
+        android:textColor="@android:color/white"
+        android:text="Target: N/A"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/current"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/target"
+        android:textColor="@android:color/white"
+        android:text="Current: N/A"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/angle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/current"
+        android:textColor="@android:color/white"
+        android:text="Angle to North: N/A"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/loading_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AA000000"
+        android:textColor="#FFFFFF"
+        android:text="Please wait. Loading..."
+        android:textSize="30dp"
+        android:gravity="center"/>
+
+
+</RelativeLayout>

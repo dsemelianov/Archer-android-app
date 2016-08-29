@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#50D2C2"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/error_bar"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/holo_red_dark"
+        android:text="Error Message!"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/mode_button"
+        android:layout_width="fill_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF">
+        <ImageView
+            android:id="@+id/mode_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/map_icon"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/information_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/error_bar">
+
+        <TextView
+            android:id="@+id/name_label"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:text="Matthew Speller" />
+
+        <RelativeLayout
+            android:id="@+id/distance_layout"
+            android:layout_below="@id/name_label"
+            android:layout_centerHorizontal="true"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:id="@+id/distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:text="N/A" />
+
+            <ImageView
+                android:id="@+id/distance_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/distance"
+                android:layout_alignBottom="@id/distance"
+                android:src="@drawable/distance_icon" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/navigation_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/mode_button"
+        android:layout_below="@+id/information_layout">
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_margin="20dp"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:src="@drawable/arrow_image"/>
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/loading_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AA000000"
+        android:textColor="#FFFFFF"
+        android:text="Loading . . ."
+        android:textSize="30dp"
+        android:gravity="center"/>
+
+
+</RelativeLayout>
